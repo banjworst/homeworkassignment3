@@ -1,0 +1,4 @@
+Question 1 
+	.. refers to the parent directory of wherever I am in my terminal
+	R means recursive, telling the copy command (cp) to copy the directories and all of their contents
+

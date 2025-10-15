@@ -1,0 +1,3 @@
+References 
+	 github copilot for debugging
+	chatGPT for debugging and terminal help

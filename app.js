@@ -49,20 +49,17 @@ function serveStatic(req, res) {
 
 
     if (pathname === '/schedule') {
-        res.writeHead(200, {'Content-Type': 'text/plain'});
-        res.end('Schedule route reached');
-        return;
+   	 console.log("Schedule route reached with query:", parsedUrl.query);
+    	 return sendResponse(res, 200, 'Schedule route reached', 'text/plain');
     } else if (pathname === '/cancel') {
-        res.writeHead(200, {'Content-Type': 'text/plain'});
-        res.end('Cancel route reached');
-        return;
+    	 console.log("Cancel route reached with query:", parsedUrl.query);
+    	 return sendResponse(res, 200, 'Cancel route reached', 'text/plain');
     } else if (pathname === '/check') {
-        res.writeHead(200, {'Content-Type': 'text/plain'});
-        res.end('Check route reached');
-        return;
-    }
+    	 console.log("Check route reached with query:", parsedUrl.query);
+    	 return sendResponse(res, 200, 'Check route reached', 'text/plain');
+}
 
-   
+
     const filePath = './public_html' + pathname;
     sendFile(filePath, res);
 }
